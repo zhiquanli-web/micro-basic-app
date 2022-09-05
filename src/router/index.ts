@@ -3,6 +3,7 @@ import { mainStaticRoutes } from './modules';
 import localCache from '@/utils/catch';
 import { tokenKey } from '@/common';
 import { firstMenuPath } from '@/utils/mapMenus';
+import { childsFirstRoutes } from './modules/childs/first';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -22,14 +23,19 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "login" */ '@/views/login/index.vue')
   },
+  ...childsFirstRoutes,
   {
     path: '/:pathMatch(.*)',
     name: '404',
     component: () => import('@/views/404.vue')
   }
 ];
+
+console.log('BASE_URL', process.env.BASE_URL);
+
 const router = createRouter({
-  history: createWebHistory(),
+  // 设置主应用基础路由为base(用于后续部署)，则子应用基础路由(baseroute)为/base/xxx
+  history: createWebHistory(process.env.BASE_URL),
   routes
 });
 

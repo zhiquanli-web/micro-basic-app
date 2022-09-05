@@ -1,4 +1,5 @@
 import { mainStaticRoutes } from '@/router/modules';
+// import { childsFirstRoutes } from '@/router/modules/childs/first';
 
 import { RouteRecord } from 'vue-router';
 
@@ -32,7 +33,11 @@ export function mapMenusToRoutes(userMenus: any[]): RouteRecord[] {
   };
   const permissionRoutes: any[] = _filterPermissionRoutes(allRoutes);
   // 静态路由(白名单路由) 与 权限路由 集合
-  Object.assign(routes, [...mainStaticRoutes, ...permissionRoutes]);
+  Object.assign(routes, [
+    ...mainStaticRoutes,
+    ...permissionRoutes
+    // ...childsFirstRoutes
+  ]);
   routes.sort((a, b) => a.meta.sort - b.meta.sort);
   if (routes && routes.length > 0) {
     firstMenuPath = routes[0].redirect ?? routes[0].path;

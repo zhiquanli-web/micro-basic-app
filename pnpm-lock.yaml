@@ -6,6 +6,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.0.3
   '@iconify-json/mdi': ^1.1.31
   '@iconify-json/ph': ^1.1.2
+  '@micro-zoe/micro-app': ^0.8.10
   '@typescript-eslint/eslint-plugin': ^5.4.0
   '@typescript-eslint/parser': ^5.4.0
   '@vue/cli-plugin-babel': ~5.0.0
@@ -41,6 +42,7 @@ specifiers:
 
 dependencies:
   '@ant-design/icons-vue': 6.1.0_vue@3.2.37
+  '@micro-zoe/micro-app': 0.8.10
   ant-design-vue: 3.2.12_vue@3.2.37
   axios: 0.21.1
   core-js: 3.24.1
@@ -1633,6 +1635,10 @@ packages:
   /@leichtgewicht/ip-codec/2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: true
+
+  /@micro-zoe/micro-app/0.8.10:
+    resolution: {integrity: sha512-Zb1G5UrOAEHhiAlanzHJiBlRFHMd4+C/Q5jkwTM991R7blb1F6uGY47pmcunzHns48Kj6k9v2+CLsozGyhQmyw==}
+    dev: false
 
   /@node-ipc/js-queue/2.0.3:
     resolution: {integrity: sha512-fL1wpr8hhD5gT2dA1qifeVaoDFlQR5es8tFuKqjHX+kdOtdNHnxkVZbtIrR2rxnMFvehkjaZRNV2H/gPXlb0hw==}
